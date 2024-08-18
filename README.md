@@ -1,6 +1,6 @@
 For my analysis, I am using [lukebarousse/data_jobs](https://huggingface.co/datasets/lukebarousse/data_jobs) Dataset.
 
-**Import & Clean Up Data**
+**[Import & Clean Up Data](https://github.com/WandererFakeer/Python_Data_Science_Basic_Projects/tree/main#import-&-clean-up-data)**
 
 I use Kaggle platform, and uploaded the above mentioned dataset as .csv file on Kaggle platform.
 I start by importing necessary libraries and loading the .csv file, and cleaned the data
