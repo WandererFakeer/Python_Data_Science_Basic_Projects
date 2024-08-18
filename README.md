@@ -5,9 +5,7 @@ For my analysis, I am using [lukebarousse/data_jobs](https://huggingface.co/data
 I use Kaggle platform, and uploaded the above mentioned dataset as .csv file on Kaggle platform.
 I start by importing necessary libraries and loading the .csv file, and cleaned the data
 
-    `  
- 
-    import pandas as pd
+    `import pandas as pd
 
     import ast
 
@@ -36,10 +34,8 @@ For detailed steps, here is the notebook: [01. Top 5 Most In-Demand Skills from 
 
 
 **Visualize Data**
-
-  `
        
-    fig, ax = plt.subplots(len(top_3_roles), 1, figsize = (8, 6))
+    `fig, ax = plt.subplots(len(top_3_roles), 1, figsize = (8, 6))
 
     #loop through the "top_3_roles" to get the dataframe containing only the job roles in each index
     for idx, job_title in enumerate(top_3_roles):
