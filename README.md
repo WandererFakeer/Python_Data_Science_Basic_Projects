@@ -5,7 +5,7 @@ For my analysis, I am using [lukebarousse/data_jobs](https://huggingface.co/data
 I use Kaggle platform, and uploaded the above mentioned dataset as .csv file on Kaggle platform.
 I start by importing necessary libraries and loading the .csv file, and cleaned the data
     
-    `import pandas as pd
+    import pandas as pd
 
     import ast
 
@@ -19,7 +19,7 @@ I start by importing necessary libraries and loading the .csv file, and cleaned 
     df["job_posted_date"] = pd.to_datetime(df.job_posted_date)
 
     #convert string type "job_skills" to list, with apply()
-    df["job_skills"] = df.job_skills.apply(lambda skill: ast.literal_eval(skill) if pd.notna(skill) else skill)`
+    df["job_skills"] = df.job_skills.apply(lambda skill: ast.literal_eval(skill) if pd.notna(skill) else skill)
 
 
 ***How are in-demand skills trending for Data Analysts***
