@@ -43,14 +43,15 @@ for idx, job_title in enumerate(top_3_roles):
     top_job_with_top_5_demanded_skills = top_3_roles_and_skills_group_with_cents[top_3_roles_and_skills_group_with_cents["job_title_short"] == job_title].head()
 
     sns.barplot(data = top_job_with_top_5_demanded_skills, x = "skills_percentage", y = "job_skills", hue = "skills_count", palette = "dark:green_r", dodge = False, ax = ax[idx])
-
 plt.show()
+
 `
 
 
 **Results**
 
 ![01. Top 5 Most In-Demand Skills from The Top 3 Data Jobs in India](https://github.com/user-attachments/assets/47cd71a8-84c5-4f3b-86e1-4f5d8f6c54aa)
+
 _Bar graph visualizing the job counts percentages for the top 5 skills, associated with the top 3 data roles in India_
 
 
