@@ -4,8 +4,9 @@ For my analysis, I am using [lukebarousse/data_jobs](https://huggingface.co/data
 
 I use Kaggle platform, and uploaded the above mentioned dataset as .csv file on Kaggle platform.
 I start by importing necessary libraries and loading the .csv file, and cleaned the data
-
-    `import pandas as pd
+`
+    
+    import pandas as pd
 
     import ast
 
@@ -19,7 +20,8 @@ I start by importing necessary libraries and loading the .csv file, and cleaned 
     df["job_posted_date"] = pd.to_datetime(df.job_posted_date)
 
     #convert string type "job_skills" to list, with apply()
-    df["job_skills"] = df.job_skills.apply(lambda skill: ast.literal_eval(skill) if pd.notna(skill) else skill)`
+    df["job_skills"] = df.job_skills.apply(lambda skill: ast.literal_eval(skill) if pd.notna(skill) else skill)
+`
 
 
 ***How are in-demand skills trending for Data Analysts***
@@ -35,7 +37,9 @@ For detailed steps, here is the notebook: [01. Top 5 Most In-Demand Skills from 
 
 **Visualize Data**
        
-    `fig, ax = plt.subplots(len(top_3_roles), 1, figsize = (8, 6))
+`
+    
+    fig, ax = plt.subplots(len(top_3_roles), 1, figsize = (8, 6))
 
     #loop through the "top_3_roles" to get the dataframe containing only the job roles in each index
     for idx, job_title in enumerate(top_3_roles):
@@ -43,7 +47,9 @@ For detailed steps, here is the notebook: [01. Top 5 Most In-Demand Skills from 
          top_job_with_top_5_demanded_skills = top_3_roles_and_skills_group_with_cents[top_3_roles_and_skills_group_with_cents["job_title_short"] == job_title].head()
 
          sns.barplot(data = top_job_with_top_5_demanded_skills, x = "skills_percentage", y = "job_skills", hue = "skills_count", palette = "dark:green_r", dodge = False, ax = ax[idx])
-    plt.show()`
+    plt.show()
+    
+`
 
 
 **Results**
