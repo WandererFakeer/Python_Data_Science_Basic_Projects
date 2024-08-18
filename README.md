@@ -44,7 +44,8 @@ for idx, job_title in enumerate(top_3_roles):
 
     sns.barplot(data = top_job_with_top_5_demanded_skills, x = "skills_percentage", y = "job_skills", hue = "skills_count", palette = "dark:green_r", dodge = False, ax = ax[idx])
 
-plt.show()`
+plt.show()
+`
 
 
 **Results**
