@@ -4,9 +4,8 @@ For my analysis, I am using [lukebarousse/data_jobs](https://huggingface.co/data
 
 I use Kaggle platform, and uploaded the above mentioned dataset as .csv file on Kaggle platform.
 I start by importing necessary libraries and loading the .csv file, and cleaned the data
-`
     
-    import pandas as pd
+    `import pandas as pd
 
     import ast
 
@@ -20,8 +19,7 @@ I start by importing necessary libraries and loading the .csv file, and cleaned 
     df["job_posted_date"] = pd.to_datetime(df.job_posted_date)
 
     #convert string type "job_skills" to list, with apply()
-    df["job_skills"] = df.job_skills.apply(lambda skill: ast.literal_eval(skill) if pd.notna(skill) else skill)
-`
+    df["job_skills"] = df.job_skills.apply(lambda skill: ast.literal_eval(skill) if pd.notna(skill) else skill)`
 
 
 ***How are in-demand skills trending for Data Analysts***
@@ -37,7 +35,7 @@ For detailed steps, here is the notebook: [01. Top 5 Most In-Demand Skills from 
 
 **Visualize Data**
        
-`
+
     
     fig, ax = plt.subplots(len(top_3_roles), 1, figsize = (8, 6))
 
@@ -48,8 +46,7 @@ For detailed steps, here is the notebook: [01. Top 5 Most In-Demand Skills from 
 
          sns.barplot(data = top_job_with_top_5_demanded_skills, x = "skills_percentage", y = "job_skills", hue = "skills_count", palette = "dark:green_r", dodge = False, ax = ax[idx])
     plt.show()
-    
-`
+
 
 
 **Results**
@@ -60,5 +57,7 @@ _Bar graph visualizing the job counts percentages for the top 5 skills, associat
 
 
 **Insights:**
+
 ● SQL is the most requested skill for Data Analysts and Data Engineers, with over half the job postings for both roles. For Data Scientists, Python is the most sought-after skill, appearing in 70% of job postings.
-●Python is one of the most important skill, highly demanded across all three roles, but most prominently for Data Scientists (70%) and Data Engineers (61%).
+
+● Python is one of the most important skill, highly demanded across all three roles, but most prominently for Data Scientists (70%) and Data Engineers (61%).
