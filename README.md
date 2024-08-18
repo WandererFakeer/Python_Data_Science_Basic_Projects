@@ -1,6 +1,6 @@
 For my analysis, I am using [lukebarousse/data_jobs](https://huggingface.co/datasets/lukebarousse/data_jobs) Dataset.
 
-#**Import & Clean Up Data**#
+#Import & Clean Up Data#
 
 I use Kaggle platform, and uploaded the above mentioned dataset as .csv file on Kaggle platform.
 I start by importing necessary libraries and loading the .csv file, and cleaned the data
@@ -22,7 +22,7 @@ I start by importing necessary libraries and loading the .csv file, and cleaned 
     df["job_skills"] = df.job_skills.apply(lambda skill: ast.literal_eval(skill) if pd.notna(skill) else skill)
 
 
-#***How are in-demand skills trending for Data Analysts***#
+#How are in-demand skills trending for Data Analysts#
 
 I first filtered out from the original dataframe, to only include data about India. 
 
@@ -33,7 +33,7 @@ Then I found out the 3 top most jobs in India, and grouped the data on the top 5
 For detailed steps, here is the notebook: [01. Top 5 Most In-Demand Skills from The Top 3 Data Jobs in India](https://github.com/WandererFakeer/Python_Data_Science_Basic_Projects/blob/main/01.%20Top%205%20Most%20In-Demand%20Skills%20from%20The%20Top%203%20Data%20Jobs%20in%20India.ipynb)
 
 
-#**Visualize Data**#
+#Visualize Data#
        
 
     
@@ -49,14 +49,14 @@ For detailed steps, here is the notebook: [01. Top 5 Most In-Demand Skills from 
 
 
 
-#**Results**#
+#Results#
 
 ![01. Top 5 Most In-Demand Skills from The Top 3 Data Jobs in India](https://github.com/user-attachments/assets/47cd71a8-84c5-4f3b-86e1-4f5d8f6c54aa)
 
 _Bar graph visualizing the job counts percentages for the top 5 skills, associated with the top 3 data roles in India_
 
 
-#**Insights:**#
+#Insights:#
 
 ● SQL is the most requested skill for Data Analysts and Data Engineers, with over half the job postings for both roles. For Data Scientists, Python is the most sought-after skill, appearing in 70% of job postings.
 
